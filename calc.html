@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html> 
+<head>  
+<title> JavaScript Calculator </title> 
+<meta charset="windows-1252">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+<script>
+	function calc()
+	{
+
+		var n1= parseInt(document.getElementById('n1').value);
+		var n2= parseInt(document.getElementById('n2').value);
+		var oper= document.getElementById('operators').value;
+
+		if(oper=='+')
+		{
+		 document.getElementById('result').value=n1+n2;
+		}
+		if(oper=='-')
+		{
+		 document.getElementById('result').value=n1-n2;
+		}
+		if(oper=='*')
+		{
+		 document.getElementById('result').value=n1*n2;
+		}
+		if(oper=='/')
+		{
+		 document.getElementById('result').value=n1/n2;
+		}
+	}
+
+</script>
+</head>
+<body>
+	<label for="n1"> First Number:</label>&nbsp&nbsp&nbsp&nbsp
+	<input type="text" id="n1"><br><br>
+	<label for="n2"> Second Number:</label>
+	<input type="text" id="n2"><br><br>
+	<label for="operators">Operators:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<select  id="operators">
+  <option value="+" selected>+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select> 
+	<button onclick="calc();">=</button><br><br>
+	<label for="result">Result:</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="test" id="result">
+
+</body>
+</html>
